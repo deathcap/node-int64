@@ -176,7 +176,7 @@ Int64.prototype = {
    * @param radix Just like Number#toString()'s radix
    */
   toString: function(radix) {
-    return this.valueOf().toString(radix || 10);
+    return require('biginteger').BigInteger.parse(this.toOctetString(), 16).toString(radix);
   },
 
   /**
